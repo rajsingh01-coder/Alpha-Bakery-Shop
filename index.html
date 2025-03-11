@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup and Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff6f61, #ff9a8d);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      border: 3px solid #ff6f61;
+    }
+
+    h2 {
+      color: #ff6f61;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    input:focus {
+      border-color: #ff6f61;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #ff6f61;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background: #e65c54;
+    }
+
+    .switch {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+
+    .switch a {
+      color: #ff6f61;
+      text-decoration: none;
+    }
+
+    .switch a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="signupForm">
+    <h2>Sign Up</h2>
+    <div class="form-group">
+      <label for="signupUsername">Username</label>
+      <input type="text" id="signupUsername" placeholder="Enter your username" required>
+    </div>
+    <div class="form-group">
+      <label for="signupPassword">Password</label>
+      <input type="password" id="signupPassword" placeholder="Enter your password" required>
+    </div>
+    <button onclick="signup()">Create Account</button>
+    <div class="switch">
+      <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+    </div>
+  </div>
+
+  <div class="card" id="loginForm" style="display: none;">
+    <h2>Login</h2>
+    <div class="form-group">
+      <label for="loginUsername">Username</label>
+      <input type="text" id="loginUsername" placeholder="Enter your username" required>
+    </div>
+    <div class="form-group">
+      <label for="loginPassword">Password</label>
+      <input type="password" id="loginPassword" placeholder="Enter your password" required>
+    </div>
+    <button onclick="login()">Login</button>
+    <div class="switch">
+      <p>Don’t have an account? <a href="#" onclick="showSignup()">Sign up here</a></p>
+    </div>
+  </div>
+
+  <script>
+    function showSignup() {
+      document.getElementById('signupForm').style.display = 'block';
+      document.getElementById('loginForm').style.display = 'none';
+    }
+
+    function showLogin() {
+      document.getElementById('signupForm').style.display = 'none';
+      document.getElementById('loginForm').style.display = 'block';
+    }
+
+    function signup() {
+      const username = document.getElementById('signupUsername').value;
+      const password = document.getElementById('signupPassword').value;
+
+      if (username === '' || password === '') {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      const user = {
+        username: username,
+        password: password
+      };
+
+      localStorage.setItem('user', JSON.stringify(user));
+      alert('Signup successful!');
+
+      document.getElementById('signupUsername').value = '';
+      document.getElementById('signupPassword').value = '';
+
+      showLogin();
+    }
+
+    function login() {
+      const username = document.getElementById('loginUsername').value;
+      const password = document.getElementById('loginPassword').value;
+
+      if (username === '' || password === '') {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      const storedUser = JSON.parse(localStorage.getItem('user'));
+
+      if (storedUser && storedUser.username === username && storedUser.password === password) {
+        alert('Login successful!');
+        window.location.href = "home.html";
+      } else {
+        alert('Invalid username or password.');
+      }
+
+      document.getElementById('loginUsername').value = '';
+      document.getElementById('loginPassword').value = '';
+    }
+  </script>
+</body>
+</html>

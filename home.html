@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Bakery Shop </title>
+ 
+</head>
+<body>
+<div class="overflow">
+    <div class="navbar">
+        <div class="logo"> Alpha Bakery Bliss</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+         
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+         
+            <li><a href="#contact">Contact</a></li>
+    </div>
+
+
+      <!-- Hero Section -->
+      <header>
+        <div class="hero-content" id="home">
+            <h1>Freshly Baked Happiness Delivered to Your Doorstep</h1>
+            <p>Discover the joy of freshly baked cakes crafted with love and premium ingredients.</p>
+            <button class="btn">Order Now</button>
+        </div>
+    </header>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+        <div class="highlight">
+            <img src="1.webp" alt="Fresh Ingredients">
+            <h3>Fresh Ingredients</h3>
+            <p>We use only the freshest ingredients for our cakes.</p>
+        </div>
+        <div class="highlight">
+            <img src="2.webp" alt="Custom Cakes">
+            <h3>Custom Cakes</h3>
+            <p>Personalize your cakes for any occasion.</p>
+        </div>
+        <div class="highlight">
+            <img src="3.webp" alt="Fast Delivery">
+            <h3>Fast Delivery</h3>
+            <p>Enjoy our quick and reliable delivery service.</p>
+        </div>
+    </section>
+
+    <!-- Best-Selling Cakes Section -->
+    <section class="best-sellers">
+        <h2>Our Best-Selling Cakes</h2>
+        <div class="cake-gallery">
+            <div class="cake">
+                <img src="4.webp" alt="Cake 1">
+                <h3>Chocolate Fudge Cake</h3>
+            </div>
+            <div class="cake">
+                <img src="3.webp" alt="Cake 2">
+                <h3>Red Velvet Cake</h3>
+            </div>
+            <div class="cake">
+                <img src="2.webp" alt="Cake 3">
+                <h3>Classic Vanilla Cake</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="about-us" id="about">
+        <!-- Story Section -->
+        <section class="story">
+            <h1>About Us</h1>
+            <h2>Our Story</h2>
+            <p>Our bakery started with a simple dream: to bring joy to people's lives through the magic of baking. What began as a small passion project in a cozy kitchen has grown into a beloved bakery, known for its dedication to quality and creativity. We pour our hearts into every cake, using only the freshest ingredients and time-tested recipes to ensure every bite is a moment to cherish.</p>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values">
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Quality:</strong> We never compromise on the ingredients we use, ensuring every product is of the highest standard.</li>
+                <li><strong>Freshness:</strong> All our cakes are baked fresh daily to guarantee the best flavor and texture.</li>
+                <li><strong>Creativity:</strong> From unique designs to custom orders, we love turning ideas into delicious realities.</li>
+            </ul>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team">
+            <h2>Meet Our Team</h2>
+            <div class="team-members">
+                <div class="member">
+                    <img src="team1.webp" alt="Team Member 1">
+                    <h3>Jane Doe</h3>
+                    <p>Head Baker</p>
+                </div>
+                <div class="member">
+                    <img src="team2.webp" alt="Team Member 2">
+                    <h3>John Smith</h3>
+                    <p>Pastry Chef</p>
+                </div>
+                <div class="member">
+                    <img src="team3.webp" alt="Team Member 3">
+                    <h3>Emily Brown</h3>
+                    <p>Decorator</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+    <div class="menu" id="menu">
+        <h1>Our Cake Menu</h1>
+
+        <!-- Birthday Cakes -->
+        <div class="category">
+            <h2>Birthday Cakes</h2>
+            <ul class="cake-list">
+                <li class="cake-item">
+                    <img src="brd.webp" alt="Chocolate Birthday Cake">
+                    <h3>Chocolate Birthday Cake</h3>
+                    <p>A rich and moist chocolate cake perfect for celebrations.</p>
+                </li>
+                <li class="cake-item">
+                    <img src="brd2.webp" alt="Vanilla Sprinkle Cake">
+                    <h3>Vanilla Sprinkle Cake</h3>
+                    <p>A classic vanilla cake with colorful sprinkles.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Wedding Cakes -->
+        <div class="category">
+            <h2>Wedding Cakes</h2>
+            <ul class="cake-list">
+                <li class="cake-item">
+                    <img src="brd7.webp" alt="Elegant White Cake">
+                    <h3>Elegant White Cake</h3>
+                    <p>A stunning white cake adorned with delicate flowers.</p>
+                </li>
+                <li class="cake-item">
+                    <img src="brd6.webp" alt="Luxury Tiered Cake">
+                    <h3>Luxury Tiered Cake</h3>
+                    <p>A luxurious multi-tiered cake for your special day.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Cupcakes -->
+        <div class="category">
+            <h2>Cupcakes</h2>
+            <ul class="cake-list">
+                <li class="cake-item">
+                    <img src="brd3.webp" alt="Chocolate Cupcakes">
+                    <h3>Chocolate Cupcakes</h3>
+                    <p>Decadent cupcakes topped with creamy chocolate frosting.</p>
+                </li>
+                <li class="cake-item">
+                    <img src="brd4.avif" alt="Red Velvet Cupcakes">
+                    <h3>Red Velvet Cupcakes</h3>
+                    <p>Soft and fluffy cupcakes with a hint of cocoa.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Seasonal Specials -->
+        <div class="category">
+            <h2>Seasonal Specials</h2>
+            <ul class="cake-list">
+                <li class="cake-item">
+                    <img src="brd5.avif" alt="Pumpkin Spice Cake">
+                    <h3>Pumpkin Spice Cake</h3>
+                    <p>A seasonal favorite with warm spices and cream cheese frosting.</p>
+                </li>
+                <li class="cake-item">
+                    <img src="2.webp" alt="Berry Delight Cake">
+                    <h3>Berry Delight Cake</h3>
+                    <p>A light and fruity cake bursting with fresh berries.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+    <div class="form-container">
+        <h1>Custom Cake Orders</h1>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <!-- Cake Details -->
+            <label for="size">Cake Size:</label>
+            <select id="size" name="size" required>
+                <option value="">-- Select Size --</option>
+                <option value="6-inch">6-inch</option>
+                <option value="8-inch">8-inch</option>
+                <option value="10-inch">10-inch</option>
+            </select>
+
+            <label for="flavor">Cake Flavor:</label>
+            <select id="flavor" name="flavor" required>
+                <option value="">-- Select Flavor --</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="red-velvet">Red Velvet</option>
+                <option value="strawberry">Strawberry</option>
+            </select>
+
+            <label for="design">Design Description:</label>
+            <textarea id="design" name="design" placeholder="Describe your desired design" required></textarea>
+
+            <label for="message">Message on Cake (Optional):</label>
+            <input type="text" id="message" name="message" placeholder="Happy Birthday, Congrats, etc.">
+
+            <!-- File Upload -->
+            <div class="file-upload">
+                <label for="reference">Upload Reference Image (Optional):</label>
+                <input type="file" id="reference" name="reference" accept="image/*">
+            </div>
+
+            <!-- Lead Time -->
+            <label for="lead-time">Lead Time (in Days):</label>
+            <input type="number" id="lead-time" name="lead_time" placeholder="e.g., 3" required>
+            <p class="note">*Please allow a minimum of 3 days for custom orders.</p>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Order</button>
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+  
+
+
+        <div class="gallery" id="gallery">
+        <h1>Our Cake Gallery</h1>
+
+        <!-- Birthday Cakes -->
+        <div class="category">
+            <h2>Birthday Cakes</h2>
+            <div class="image-grid">
+                <a href="#img1"><img src="brd.webp" alt="Birthday Cake 1" id="img1"></a>
+                <a href="#img2"><img src="brd2.webp" alt="Birthday Cake 2" id="img2"></a>
+                <a href="#img3"><img src="brd3.webp" alt="Birthday Cake 3" id="img3"></a>
+            </div>
+        </div>
+
+        <!-- Wedding Cakes -->
+        <div class="category">
+            <h2>Wedding Cakes</h2>
+            <div class="image-grid">
+                <a href="#img4"><img src="brd4.avif" alt="Wedding Cake 1" id="img4"></a>
+                <a href="#img5"><img src="brd5.avif" alt="Wedding Cake 2" id="img5"></a>
+                <a href="#img6"><img src="brd6.webp" alt="Wedding Cake 3" id="img6"></a>
+            </div>
+        </div>
+
+        <!-- Cupcakes -->
+        <div class="category">
+            <h2>Cupcakes</h2>
+            <div class="image-grid">
+                <a href="#img7"><img src="brd7.webp" alt="Cupcake 1" id="img7"></a>
+                <a href="#img8"><img src="1.webp" alt="Cupcake 2" id="img8"></a>
+                <a href="#img9"><img src="2.webp" alt="Cupcake 3" id="img9"></a>
+            </div>
+        </div>
+
+        <!-- Seasonal Specials -->
+        <div class="category">
+            <h2>Seasonal Specials</h2>
+            <div class="image-grid">
+                <a href="#img10"><img src="3.webp" alt="Seasonal Cake 1" id="img10"></a>
+                <a href="#img11"><img src="4.webp" alt="Seasonal Cake 2" id="img11"></a>
+                <a href="#img12"><img src="brd2.webp" alt="Seasonal Cake 3" id="img12"></a>
+            </div>
+        </div>
+
+        
+<br>
+<br>
+    <div class="testimonials">
+        <h1>What Our Customers Say</h1>
+        <div class="testimonial-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial">
+                <h3>John Doe</h3>
+                <p>"The best cakes I've ever tasted! The flavors are amazing, and the designs are beautiful. Highly recommend!"</p>
+                <div class="rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <img src="c.webp" alt="John Doe">
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial">
+                <h3>Jane Smith</h3>
+                <p>"I ordered a custom cake for my wedding, and it was absolutely perfect. Thank you for making our day so special!"</p>
+                <div class="rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9734;</span>
+                </div>
+                <img src="c2.webp" alt="Jane Smith">
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial">
+                <h3>Emily Johnson</h3>
+                <p>"The cupcakes were a hit at my party! Fresh, delicious, and beautifully decorated. Will order again!"</p>
+                <div class="rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                </div>
+                <img src="c3.avif" alt="Emily Johnson">
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+     <div class="blog">
+        <h1>Our Blog & Recipes</h1>
+        <div class="blog-container">
+            <!-- Post 1 -->
+            <div class="post">
+                <img src="b.webp" alt="Valentine's Day Cakes">
+                <h2>Top 5 Cake Designs for Valentine's Day</h2>
+                <p>Get inspired by our most romantic and creative cake designs, perfect for celebrating love!</p>
+                <a href="#">Read More</a>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="post">
+                <img src="b2.webp" alt="Baking Tips">
+                <h2>5 Essential Baking Tips for Beginners</h2>
+                <p>Learn the secrets to baking like a pro with these simple and effective tips.</p>
+                <a href="#">Read More</a>
+            </div>
+
+            <!-- Post 3 -->
+            <div class="post">
+                <img src="b3.webp" alt="Behind the Scenes">
+                <h2>Behind the Scenes: A Day at Our Bakery</h2>
+                <p>Discover what goes into making your favorite cakes, from mixing to decorating.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+        <div class="contact" id="contact">
+        <h1>Contact Us</h1>
+        <div class="contact-details">
+            <p><strong>Address:</strong> 123 Bakery Lane, Sweet City, SC 45678</p>
+            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p><strong>Email:</strong> info@bakeryshop.com</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="map">
+            <h2>Find Us Here</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093687!2d-122.41941548468288!3d37.77492977975995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064cb4d661f%3A0xa77edb8c5f8c1b63!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1617117160413!5m2!1sen!2sus" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+    <br>
+    <br>
+       <div class="store">
+        <h1>Our Online Store</h1>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for cakes...">
+        </div>
+        <div class="products">
+            <!-- Example Product -->
+            <div class="product">
+                <img src="2.webp" alt="Birthday Cake">
+                <h2>Birthday Cake</h2>
+                <p>$25.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="3.webp" alt="Wedding Cake">
+                <h2>Wedding Cake</h2>
+                <p>$100.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="brd7.webp" alt="Cupcakes">
+                <h2>Cupcakes (Dozen)</h2>
+                <p>$15.00</p>
+                <button>Add to Cart</button>
+            </div>
+
+        </div>
+
+        <div class="cart">
+            <h2>Your Cart</h2>
+            <ul class="cart-items">
+                <li>
+                    <span>Birthday Cake</span>
+                    <span>$25.00</span>
+                </li>
+                <li>
+                    <span>Cupcakes</span>
+                    <span>$15.00</span>
+                </li>
+            </ul>
+            <p class="cart-total">Total: $40.00</p>
+        </div>
+
+        <div class="checkout">
+            <button>Checkout</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+     <footer>
+        <div class="links">
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="contact-info">
+            <p>Email: support@bakeryshop.com</p>
+            <p>Phone: +123-456-7890</p>
+            <p>Address: 123 Bakery Street, Caketown</p>
+        </div>
+        <div class="newsletter">
+            <p>Subscribe to our newsletter:</p>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+    </footer>
+
+</div>
+    <script>
+  // Hamburger Menu
+function toggleMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('active');
+}
+
+// Lightbox
+const lightboxImages = document.querySelectorAll('.image-grid img');
+const lightbox = document.querySelectorAll('.lightbox');
+
+lightboxImages.forEach((image, index) => {
+    image.addEventListener('click', () => {
+        lightbox[index].style.display = 'flex';
+    });
+});
+
+lightbox.forEach((lightbox) => {
+    lightbox.addEventListener('click', (e) => {
+        if (e.target.classList.contains('lightbox') || e.target.classList.contains('close')) {
+            lightbox.style.display = 'none';
+        }
+    });
+});
+
+// Form Validation
+const form = document.querySelector('form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const messageInput = document.querySelector('#message');
+
+form.addEventListener('submit', (e) => {
+    if (nameInput.value.trim() === '') {
+        alert('Please enter your name');
+        e.preventDefault();
+    } else if (emailInput.value.trim() === '') {
+        alert('Please enter your email');
+        e.preventDefault();
+    } else if (messageInput.value.trim() === '') {
+        alert('Please enter your message');
+        e.preventDefault();
+    }
+});
+
+// Cart Functionality
+const cartButton = document.querySelector('.cart button');
+const cartItems = document.querySelector('.cart-items');
+const cartTotal = document.querySelector('.cart-total');
+
+let cart = [];
+
+cartButton.addEventListener('click', () => {
+    const product = {
+        name: 'Product Name',
+        price: 10.99,
+    };
+
+    cart.push(product);
+    updateCart();
+});
+
+function updateCart() {
+    cartItems.innerHTML = '';
+    let total = 0;
+
+    cart.forEach((product, index) => {
+        const item = document.createElement('li');
+        item.textContent = `${product.name} - $${product.price}`;
+        cartItems.appendChild(item);
+
+        total += product.price;
+    });
+
+    cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+}
+
+// Search Bar Functionality
+const searchBar = document.querySelector('.search-bar input');
+const products = document.querySelectorAll('.product');
+
+searchBar.addEventListener('input', () => {
+    const searchTerm = searchBar.value.toLowerCase();
+
+    products.forEach((product) => {
+        const productName = product.querySelector('h2').textContent.toLowerCase();
+
+        if (productName.includes(searchTerm)) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+});
+
+// Checkout Functionality
+const checkoutButton = document.querySelector('.checkout button');
+
+checkoutButton.addEventListener('click', () => {
+    alert('Thank you for your order!');
+    cart = [];
+    updateCart();
+});
+    </script>
+
+</body>
+</html>
